@@ -6,7 +6,7 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:29:51 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/11 16:41:03 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:52:46 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ int ft_len(int n)
     }
     return (len);    
 }
+void putchar(char c)
+{
+    write (1, &c, 1);
+}
 int ft_nb_printf(int n)
 { 
     int i;
@@ -37,7 +41,7 @@ int ft_nb_printf(int n)
     }
     else if (n < 0)
     {
-        ft_putchar('-');   
+        putchar('-');   
         ft_nb_printf(n * -1);
     } 
     else if (n > 9)
@@ -46,6 +50,6 @@ int ft_nb_printf(int n)
         ft_nb_printf(n % 10);
     }
     else 
-        ft_putchar(n + '0');
+        putchar(n + '0');
     return (i);
 } 

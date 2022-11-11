@@ -6,7 +6,7 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:16:42 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/10 14:07:34 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:55:55 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_putchar(char c)
 {
-    write(1, &c, 1);
+    write (1, &c, 1);
 }
 int ft_unb_printf(unsigned int nb)
 {
