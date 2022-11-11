@@ -6,17 +6,30 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:29:51 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/10 14:09:35 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:41:03 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+int ft_len(int n)
+{
+    int len;
 
+    len = 0;
+    if (n <= 0)
+        len++;
+    while (n % 10 != 0)
+    {    
+        len++;
+        n /= 10;
+    }
+    return (len);    
+}
 int ft_nb_printf(int n)
 { 
     int i;
 
-    i = len(n);
+    i = ft_len(n);
     if (n == -2147483648)
     {
         write(1, "-2147483648", 11);

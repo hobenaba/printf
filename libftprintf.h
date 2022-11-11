@@ -6,7 +6,7 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:05:08 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/10 16:46:58 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/11 16:19:53 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int ft_unb_printf(unsigned int nb);
 int ft_iint_printf(int n);
 void ft_putchar(char c);
 int ft_adress_printf(unsigned long n);
-int ft_hex_printf(unsigned int n, char c);
-int ft_int_printf(int n);
+int ft_hexa_printf(unsigned int n, char c);
 int ft_printf(const char *format, ...);
 
 #endif
