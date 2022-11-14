@@ -6,7 +6,7 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:29:51 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/14 11:34:07 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:38:51 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,5 @@ int ft_nb_printf(int n)
     }
     else
         ft_char_printf(n + '0');
-    printf("\n");
     return (ft_len(n));
 }
