@@ -6,34 +6,15 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:29:51 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/11 16:52:46 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/14 11:34:07 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-int ft_len(int n)
-{
-    int len;
+#include "ft_printf.h"
+#include <stdio.h>
 
-    len = 0;
-    if (n <= 0)
-        len++;
-    while (n % 10 != 0)
-    {    
-        len++;
-        n /= 10;
-    }
-    return (len);    
-}
-void putchar(char c)
-{
-    write (1, &c, 1);
-}
 int ft_nb_printf(int n)
 { 
-    int i;
-
-    i = ft_len(n);
     if (n == -2147483648)
     {
         write(1, "-2147483648", 11);
@@ -41,7 +22,7 @@ int ft_nb_printf(int n)
     }
     else if (n < 0)
     {
-        putchar('-');   
+        write(1, "-", 1);   
         ft_nb_printf(n * -1);
     } 
     else if (n > 9)
@@ -49,7 +30,8 @@ int ft_nb_printf(int n)
         ft_nb_printf(n / 10);
         ft_nb_printf(n % 10);
     }
-    else 
-        putchar(n + '0');
-    return (i);
-} 
+    else
+        ft_char_printf(n + '0');
+    printf("\n");
+    return (ft_len(n));
+}

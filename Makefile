@@ -4,7 +4,9 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libftprintf.a
 
-MANDOTARY = ft_adress_printf.c	ft_char_printf.c	ft_hexa_printf.c	ft_nb_printf.c	ft_printf.c	ft_str_printf.c	ft_unb_printf.c
+MANDOTARY = ft_adress_printf.c	ft_char_printf.c	ft_hexa_printf.c	ft_nb_printf.c	ft_printf.c	ft_str_printf.c	ft_unb_printf.c \
+			ft_len.c	ft_strlen.c
+
 
 OBJ =$(MANDOTARY:.c=.o)
 
@@ -15,10 +17,10 @@ all : $(NAME)
 $(NAME) : $(OBJ) 
 	ar -rcs $(NAME) $(OBJ)
 
-clean : $(OBJ)
+clean :
 	rm -rf *.o
 
 fclean : clean
-	rm -rf all
+	rm -rf  $(NAME)
 
-re : clean	all
+re : fclean	all

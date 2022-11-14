@@ -5,22 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:57:47 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/10 15:37:14 by hobenaba         ###   ########.fr       */
+/*   Created: 2022/11/11 18:18:15 by hobenaba          #+#    #+#             */
+/*   Updated: 2022/11/14 11:33:58 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_len(long long n)
+#include <stdio.h>
+
+int ft_len(int n)
 {
     int len;
 
     len = 0;
     if (n <= 0)
         len++;
-    while (n % 10 != 0)
+    while (n)
     {    
+        n = n / 10;
         len++;
-        n /= 10;
     }
     return (len);    
 }

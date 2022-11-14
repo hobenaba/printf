@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_adress_printf.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 16:20:28 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/14 09:32:56 by hobenaba         ###   ########.fr       */
+/*   Created: 2022/11/14 09:18:33 by hobenaba          #+#    #+#             */
+/*   Updated: 2022/11/14 09:21:43 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_adress_printf(unsigned long n)
+size_t ft_strlen(const char *str)
 {
-    int i;
-    write(1, "0x", 2);
-    i = ft_hexa_printf(n, 'x');
-    return (i + 2);
+    size_t i;
+
+    i = 0;
+    while (str[i])
+        i++;
+    return (i); 
 }
-// #include <stdio.h>
-// int main()
-// {
-//     //printf("%p", &a);
-//     ft_adress_printf(-1);
-// }
