@@ -6,15 +6,14 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:38:06 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/14 11:32:21 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:31:57 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_char_printf(char c)
+int	ft_char_printf(char c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }
-

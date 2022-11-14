@@ -5,23 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 16:20:28 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/14 09:32:56 by hobenaba         ###   ########.fr       */
+/*   Created: 2022/11/14 14:46:43 by hobenaba          #+#    #+#             */
+/*   Updated: 2022/11/14 15:31:10 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_adress_printf(unsigned long n)
+int	ft_adress_printf(unsigned long n)
 {
-    int i;
-    write(1, "0x", 2);
-    i = ft_hexa_printf(n, 'x');
-    return (i + 2);
+	int	i;
+
+	i = 0;
+	write (1, "0x", 2);
+	i = ft_hexa_printf(n, 'x');
+	return (i + 2);
 }
-// #include <stdio.h>
-// int main()
-// {
-//     //printf("%p", &a);
-//     ft_adress_printf(-1);
-// }

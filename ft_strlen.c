@@ -6,18 +6,18 @@
 /*   By: hobenaba <hobenaba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:18:33 by hobenaba          #+#    #+#             */
-/*   Updated: 2022/11/14 09:21:43 by hobenaba         ###   ########.fr       */
+/*   Updated: 2022/11/14 15:50:38 by hobenaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i); 
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
